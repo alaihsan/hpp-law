@@ -80,14 +80,19 @@
                 
                 <!-- Desktop Menu -->
                 <div class="hidden md:flex space-x-8 items-center">
-                    <a href="index.html" class="text-gray-700 hover:text-[#C5A059] font-medium transition">Home</a>
-                    <a href="our-story.html" class="text-gray-700 hover:text-[#C5A059] font-medium transition">Our Story</a>
-                    <a href="visi-misi.html" class="text-gray-700 hover:text-[#C5A059] font-medium transition">Visi & Misi</a>
-                    <a href="layanan.html" class="text-gray-700 hover:text-[#C5A059] font-medium transition">Layanan</a>
-                    <a href="partner.html" class="text-gray-700 hover:text-[#C5A059] font-medium transition">Partner</a>
-                    <a href="contact.html" class="navy-bg text-white px-6 py-2 rounded-full font-medium hover:bg-[#C5A059] transition shadow-lg">
+                    <a href="index.html" class="text-gray-700 hover:text-[#C5A059] font-medium transition" data-i18n="nav.home">Home</a>
+                    <a href="our-story.html" class="text-gray-700 hover:text-[#C5A059] font-medium transition" data-i18n="nav.ourStory">Our Story</a>
+                    <a href="visi-misi.html" class="text-gray-700 hover:text-[#C5A059] font-medium transition" data-i18n="nav.visiMisi">Visi & Misi</a>
+                    <a href="layanan.html" class="text-gray-700 hover:text-[#C5A059] font-medium transition" data-i18n="nav.layanan">Layanan</a>
+                    <a href="partner.html" class="text-gray-700 hover:text-[#C5A059] font-medium transition" data-i18n="nav.partner">Partner</a>
+                    <a href="contact.html" class="navy-bg text-white px-6 py-2 rounded-full font-medium hover:bg-[#C5A059] transition shadow-lg" data-i18n="nav.contact">
                         Contact
                     </a>
+                </div>
+
+                <div class="ml-4 flex items-center gap-2">
+                    <button class="lang-switch text-sm px-2 py-1 rounded hover:bg-gray-100" data-lang="id" aria-label="Bahasa Indonesia">🇮🇩</button>
+                    <button class="lang-switch text-sm px-2 py-1 rounded hover:bg-gray-100" data-lang="en" aria-label="English">🇬🇧</button>
                 </div>
 
 
@@ -322,5 +327,7 @@
         </span>
     </a>
 
+    <script src="js/i18n.js"></script>
+    <script src="js/script.js"></script>
 </body>
 </html>

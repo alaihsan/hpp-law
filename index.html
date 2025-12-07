@@ -80,14 +80,20 @@
                 
                 <!-- Desktop Menu -->
                 <div class="hidden md:flex space-x-8 items-center">
-                    <a href="index.html" class="text-gray-700 hover:text-[#C5A059] font-medium transition">Home</a>
-                    <a href="our-story.html" class="text-gray-700 hover:text-[#C5A059] font-medium transition">Our Story</a>
-                    <a href="visi-misi.html" class="text-gray-700 hover:text-[#C5A059] font-medium transition">Visi & Misi</a>
-                    <a href="layanan.html" class="text-gray-700 hover:text-[#C5A059] font-medium transition">Layanan</a>
-                    <a href="partner.html" class="text-gray-700 hover:text-[#C5A059] font-medium transition">Partner</a>
-                    <a href="contact.html" class="navy-bg text-white px-6 py-2 rounded-full font-medium hover:bg-[#C5A059] transition shadow-lg">
+                    <a href="index.html" class="text-gray-700 hover:text-[#C5A059] font-medium transition" data-i18n="nav.home">Home</a>
+                    <a href="our-story.html" class="text-gray-700 hover:text-[#C5A059] font-medium transition" data-i18n="nav.ourStory">Our Story</a>
+                    <a href="visi-misi.html" class="text-gray-700 hover:text-[#C5A059] font-medium transition" data-i18n="nav.visiMisi">Visi & Misi</a>
+                    <a href="layanan.html" class="text-gray-700 hover:text-[#C5A059] font-medium transition" data-i18n="nav.layanan">Layanan</a>
+                    <a href="partner.html" class="text-gray-700 hover:text-[#C5A059] font-medium transition" data-i18n="nav.partner">Partner</a>
+                    <a href="contact.html" class="navy-bg text-white px-6 py-2 rounded-full font-medium hover:bg-[#C5A059] transition shadow-lg" data-i18n="nav.contact">
                         Contact
                     </a>
+                </div>
+
+                <!-- Language switch (visible on all sizes) -->
+                <div class="ml-4 flex items-center gap-2">
+                    <button class="lang-switch text-sm px-2 py-1 rounded hover:bg-gray-100" data-lang="id" aria-label="Bahasa Indonesia">🇮🇩</button>
+                    <button class="lang-switch text-sm px-2 py-1 rounded hover:bg-gray-100" data-lang="en" aria-label="English">🇬🇧</button>
                 </div>
 
 
@@ -99,19 +105,19 @@
     <section id="home" class="relative h-screen flex items-center justify-center bg-cover bg-center" style="background-image: url('https://images.unsplash.com/photo-1486406146926-c627a92ad1ab?ixlib=rb-1.2.1&auto=format&fit=crop&w=1920&q=80');">
         <div class="absolute inset-0 bg-slate-900 bg-opacity-80"></div>
         <div class="relative z-10 text-center px-4 max-w-4xl mx-auto slide-up">
-            <h1 class="text-4xl md:text-6xl font-bold text-white mb-6 leading-tight">
+            <h1 class="text-4xl md:text-6xl font-bold text-white mb-6 leading-tight" data-i18n="hero.title">
                 Your Challenge, <span class="gold-text italic">Our Solution.</span>
             </h1>
-            <p class="text-lg md:text-xl text-gray-300 mb-10 font-light">
+            <p class="text-lg md:text-xl text-gray-300 mb-10 font-light" data-i18n="hero.subtitle">
                 Mitra hukum strategis yang memadukan integritas dan wawasan bisnis untuk melindungi aset serta memastikan kepatuhan perusahaan Anda.
             </p>
             <div class="flex flex-col md:flex-row gap-4 justify-center">
                 <a href="https://wa.me/6281282820904?text=Halo%20HPP%20Law%20Office,%20saya%20tertarik%20untuk%20konsultasi%20hukum." 
                    class="gold-bg text-white px-8 py-4 rounded shadow-lg font-bold hover:bg-yellow-600 transition flex items-center justify-center gap-2">
-                    <i class="fab fa-whatsapp text-xl"></i> KONSULTASI GRATIS
+                    <i class="fab fa-whatsapp text-xl"></i> <span data-i18n="hero.cta_free">KONSULTASI GRATIS</span>
                 </a>
                 <a href="#services" class="border border-white text-white px-8 py-4 rounded hover:bg-white hover:text-slate-900 transition font-medium">
-                    Pelajari Layanan
+                    <span data-i18n="hero.cta_learn">Pelajari Layanan</span>
                 </a>
             </div>
         </div>
@@ -475,5 +481,8 @@
         </span>
     </a>
 
+    <script src="js/i18n.js"></script>
+    <script src="js/script.js"></script>
 </body>
+</html>
 </html>
