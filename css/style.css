@@ -50,3 +50,14 @@ h1, h2, h3, h4, .brand-font {
 .lang-switch:not(.active):hover {
     background-color: #e5e7eb;
 }
+
+/* Scroll to Top Hidden State */
+#scrollToTop {
+    opacity: 0;
+    visibility: hidden;
+    transition: all 0.3s ease-in-out;
+}
+#scrollToTop.show {
+    opacity: 1;
+    visibility: visible;
+}

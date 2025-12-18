@@ -4,109 +4,13 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Layanan - HPP Law Office</title>
+    <link rel="icon" type="image/png" href="logohpp.png">
     <script src="https://cdn.tailwindcss.com"></script>
     <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" rel="stylesheet">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;600;700&family=Lato:wght@300;400;700&display=swap" rel="stylesheet">
-
-    <style>
-        :root{
-            --gold: #C5A059;
-            --navy: #0F172A;
-            --muted: #6b7280;
-            --card-shadow: 0 18px 40px -12px rgba(15,23,42,0.12);
-        }
-
-        body {
-            font-family: 'Lato', sans-serif;
-            -webkit-font-smoothing: antialiased;
-            -moz-osx-font-smoothing: grayscale;
-            line-height: 1.6;
-            color: #1f2937;
-            -webkit-text-size-adjust: 100%;
-        }
-        h1, h2, h3, h4, .brand-font {
-            font-family: 'Playfair Display', serif;
-        }
-        .gold-text { color: var(--gold); }
-        .gold-bg { background-color: var(--gold); }
-        .navy-bg { background-color: var(--navy); }
-        /* Hover card effect like Geberindo but smoother */
-        .service-card {
-            transition: transform 0.28s cubic-bezier(.2,.9,.2,1), box-shadow 0.28s, border-color 0.28s;
-            will-change: transform;
-            border-bottom-width: 2px;
-            border-color: transparent;
-            background-clip: padding-box;
-        }
-        .service-card:hover {
-            transform: translateY(-6px) scale(1.01);
-            box-shadow: 0 18px 40px -12px rgba(15, 23, 42, 0.18);
-            border-color: rgba(197,160,89,0.95);
-        }
-
-        /* Beautiful quick animations */
-        .fade-in {
-            animation: fadeIn 0.4s ease-out;
-        }
-        .slide-up {
-            animation: slideUp 0.5s ease-out;
-        }
-        .scale-in {
-            animation: scaleIn 0.5s ease-out;
-        }
-
-        @keyframes fadeIn {
-            from { opacity: 0; }
-            to { opacity: 1; }
-        }
-        @keyframes slideUp {
-            from { transform: translateY(20px); opacity: 0; }
-            to { transform: translateY(0); opacity: 1; }
-        }
-        @keyframes scaleIn {
-            from { transform: scale(0.95); opacity: 0; }
-            to { transform: scale(1); opacity: 1; }
-        }
-
-        /* Accessibility helpers */
-        .sr-only { position: absolute; width: 1px; height: 1px; padding: 0; margin: -1px; overflow: hidden; clip: rect(0,0,0,0); white-space: nowrap; border: 0; }
-        .skip-link:focus { position: fixed; z-index: 60; }
-
-        /* ensure anchored sections are visible below fixed nav */
-        section[id], div[id] { scroll-margin-top: 5.75rem; }
-
-        /* focus ring for keyboard users */
-        a:focus-visible, button:focus-visible { outline: 3px solid rgba(197,160,89,0.25); outline-offset: 2px; border-radius: 8px; }
-        .lang-switch-container {
-            display: flex;
-            border-radius: 9999px;
-            background-color: #f3f4f6;
-            border: 1px solid #e5e7eb;
-            overflow: hidden;
-        }
-
-        .lang-switch {
-            padding: 0.5rem 1rem;
-            font-size: 0.875rem;
-            font-weight: 500;
-            color: #4b5563;
-            background-color: transparent;
-            border: none;
-            cursor: pointer;
-            transition: all 0.2s ease-in-out;
-        }
-
-        .lang-switch.active {
-            background-color: #C5A059;
-            color: #ffffff;
-        }
-
-        .lang-switch:not(.active):hover {
-            background-color: #e5e7eb;
-        }
-    </style>
+    <link rel="stylesheet" href="css/style.css">
 </head>
 <body class="bg-gray-50 text-gray-800">
 
@@ -644,6 +548,11 @@
         <span class="absolute right-16 md:right-20 bg-white text-gray-800 px-4 py-2 rounded shadow-md text-sm font-bold opacity-0 group-hover:opacity-100 transition-opacity whitespace-nowrap" data-i18n="whatsapp.tooltip">
         </span>
     </a>
+
+    <!-- SCROLL TO TOP BUTTON -->
+    <button id="scrollToTop" class="fixed bottom-36 right-4 md:bottom-28 md:right-8 bg-white border border-gray-200 text-slate-900 w-12 h-12 md:w-16 md:h-16 rounded-full flex items-center justify-center shadow-lg hover:bg-slate-50 transition-all duration-300 z-50 group">
+        <i class="fas fa-arrow-up text-xl md:text-2xl group-hover:-translate-y-1 transition-transform"></i>
+    </button>
 
     <script src="js/i18n.js"></script>
     <script src="js/script.js"></script>

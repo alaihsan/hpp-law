@@ -40,4 +40,39 @@ document.addEventListener('DOMContentLoaded', () => {
             nav.classList.add('bg-transparent', 'text-white');
         }
     });
+
+    // Scroll to top button logic
+    const scrollBtn = document.getElementById('scrollToTop');
+
+    if (scrollBtn) {
+        window.addEventListener('scroll', () => {
+            if (window.scrollY > 300) {
+                scrollBtn.classList.add('show');
+            } else {
+                scrollBtn.classList.remove('show');
+            }
+        });
+
+        scrollBtn.addEventListener('click', () => {
+            const startPosition = window.scrollY;
+            const duration = 800; // ms
+            let startTime = null;
+
+            function animation(currentTime) {
+                if (startTime === null) startTime = currentTime;
+                const timeElapsed = currentTime - startTime;
+                
+                const progress = Math.min(timeElapsed / duration, 1);
+                const easeInPower = progress * progress * progress; // Cubic Ease-In
+                
+                window.scrollTo(0, startPosition * (1 - easeInPower));
+
+                if (timeElapsed < duration) {
+                    requestAnimationFrame(animation);
+                }
+            }
+
+            requestAnimationFrame(animation);
+        });
+    }
 });
