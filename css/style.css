@@ -63,13 +63,14 @@ h1, h2, h3, h4, .brand-font {
 }
 
 /* Active link style */
-.active-link {
+#desktop-menu a.active-link {
     color: #EAB308; /* Brighter Yellow */
-    font-weight: 700; /* Bold */
+    font-weight: bold !important; /* Bold */
 }
 
 /* For mobile nav, the color is the primary indicator */
 .mobile-active-link i,
 .mobile-active-link span {
     color: #C5A059 !important;
+    font-weight: bold;
 }

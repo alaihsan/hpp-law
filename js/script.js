@@ -31,15 +31,24 @@ document.addEventListener('DOMContentLoaded', () => {
 
     // Navbar scroll effect
     const nav = document.querySelector('nav');
-    window.addEventListener('scroll', () => {
-        if (window.scrollY > 50) {
-            nav.classList.add('bg-white', 'shadow-md');
-            nav.classList.remove('bg-transparent', 'text-white');
-        } else {
-            nav.classList.remove('bg-white', 'shadow-md');
-            nav.classList.add('bg-transparent', 'text-white');
-        }
-    });
+    const currentPageForNav = window.location.pathname.split('/').pop() || 'index.html';
+
+    if (currentPageForNav === 'index.html') {
+        const handleScroll = () => {
+            if (window.scrollY > 50) {
+                nav.classList.add('bg-white', 'shadow-md');
+                nav.classList.remove('bg-transparent', 'text-white');
+            } else {
+                nav.classList.remove('bg-white', 'shadow-md');
+                nav.classList.add('bg-transparent', 'text-white');
+            }
+        };
+        window.addEventListener('scroll', handleScroll);
+        handleScroll(); // Run on page load
+    } else {
+        nav.classList.add('bg-white', 'shadow-md');
+        nav.classList.remove('bg-transparent', 'text-white');
+    }
 
     // Scroll to top button logic
     const scrollBtn = document.getElementById('scrollToTop');
