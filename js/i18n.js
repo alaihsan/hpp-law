@@ -521,7 +521,7 @@ document.addEventListener('DOMContentLoaded', () => {
                 }
             
                 // initialize
-                const saved = localStorage.getItem('lang') || (navigator.language && navigator.language.startsWith('en') ? 'en' : 'id');
+                const saved = localStorage.getItem('lang') || 'id';
                 setLang(saved);
             
                 document.querySelectorAll('.lang-switch').forEach(btn => {
